@@ -1,7 +1,9 @@
 require_relative 'p04_linked_list'
 
+
 class HashMap
   attr_accessor :count
+  include Enumerable
 
   def initialize(num_buckets = 8)
     @store = Array.new(num_buckets) { LinkedList.new }
@@ -10,6 +12,10 @@ class HashMap
 
   def include?(key)
   end
+
+  # def [](pos)
+  #   @store[pos].first.val
+  # end
 
   def set(key, val)
   end
@@ -20,10 +26,11 @@ class HashMap
   def delete(key)
   end
 
-  def each
-  end
+  # def each
+  #   @store.each {|sub| yield sub}
+  # end
 
-  # uncomment when you have Enumerable included
+  #uncomment when you have Enumerable included
   # def to_s
   #   pairs = inject([]) do |strs, (k, v)|
   #     strs << "#{k.to_s} => #{v.to_s}"
