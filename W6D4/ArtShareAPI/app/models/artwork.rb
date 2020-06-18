@@ -10,8 +10,7 @@
 class Artwork < ApplicationRecord
   validates :title, presence: true
   validates :image_url, presence: true
-  validates :artist_id, presence: true
-
+  # validates :artist_id, presence: true
   validates :title, uniqueness: { scope: :artist_id }
 
   has_many :artwork_shares,
