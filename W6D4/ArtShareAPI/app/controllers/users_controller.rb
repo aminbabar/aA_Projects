@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
     def index
-        @users = User.all
+        if params[query] 
+            @users = User.all
+        else
+            @users = User.all
+        end
+
         render json: @users
     end
 
@@ -42,7 +47,5 @@ class UsersController < ApplicationController
     def user_params
         params.require(:user).permit(:name) 
     end
-
-
     
 end
