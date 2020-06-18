@@ -23,3 +23,8 @@ artwork4 = Artwork.create!(title: 'Leonardos second drawing', image_url: 'URL4',
 share1 = ArtworkShare.create!(artwork_id: artwork1.id, viewer_id: user1.id)
 share2 = ArtworkShare.create!(artwork_id: artwork2.id, viewer_id: user3.id)
 share3 = ArtworkShare.create!(artwork_id: artwork3.id, viewer_id: user2.id)
+
+
+comment1 = Comment.create!(artist_id: user2.id, artwork_id: artwork1.id, body: "disgusting painting")
+comment2 = Comment.create!(artist_id: user3.id, artwork_id: artwork2.id, body: "love it")
+comment3 = Comment.create!(artist_id: user1.id, artwork_id: artwork3.id, body: "ehh")

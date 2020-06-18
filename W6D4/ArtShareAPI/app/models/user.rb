@@ -24,4 +24,10 @@ class User < ApplicationRecord
         through: :artwork_shares,
         source: :artwork,
         dependent: :destroy
+
+    has_many :comments,
+        foreign_key: :artist_id,
+        class_name: :Comment,
+        dependent: :destroy
+
 end
