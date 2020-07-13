@@ -51,3 +51,38 @@ h1 {
   opacity: 1;
   transform: translateX(0%) scale(1);
 }
+
+.drop-down-dog-nav {
+  width: 220px;
+  margin: auto;
+  border-radius: 5px;
+  color: gray;
+}
+
+.drop-down-dog-nav h3 {
+  font-weight: 600;
+}
+
+
+.drop-down-dog-nav:hover {
+  background-color: white;
+
+}
+
+.dog-link.open {
+  display: block;
+}
+
+.dog-link {
+  display: none;
+
+}
+
+.dog-link a {
+  color: black;
+  text-decoration: none;
+}
+
+.dog-link a:hover {
+  color: blue;
+}
