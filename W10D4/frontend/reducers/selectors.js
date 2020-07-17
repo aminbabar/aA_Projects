@@ -7,7 +7,7 @@ const allTodos = (state) => {
     // debugger;
     let todo_ids = keys.map ((ele, idx) => {
         // debugger;
-        return ele;
+        return state.todos[ele];
     });
 
     return todo_ids;
